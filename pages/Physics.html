@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <link rel="stylesheet" href=".././style/style.css"/>
+    <script src=".././script/script.js" defer></script>
+
+  </head>
+  
+  <body dir="rtl">
+    <div class="header">
+      <h1 class="headerText">חומר השלמה בפיזיקה</h1>
+      <button class="homebutton" onclick="home()">דף בית</button>
+    </div>
+
+    <div class="background_box">
+      <h1 class="summary_title"> סיכום שיעור פיזיקה לכיתה ט</h1>
+      <div class="summary_box">
+          שיעור פיזיקה לכיתה ט מהווה הזדמנות מרתקת לתלמידים להכיר את עקרונות הפיזיקה הבסיסיים ולגלות את הקשרים בין תופעות טבעיות והסביבה בה הם חיים. במהלך השיעור לומדים התלמידים על חוקי התנועה של ניוטון, המהווים את הבסיס להבנת ההתנהגות של גופים בתנאים שונים, כמו גם את חקר הכוחות הפועלים עליהם. בנוסף, נלמדות מושגים כגון אנרגיה, עבודה וכוח, וכן איך הם משפיעים על פעולתם של אובייקטים שונים. שיעור פיזיקה בגיל הזה גם כולל התנסויות מעשיות, כמו ניסויים בתחום הקינטיקה והחום, שממחישים את החומר הנלמד ונותנים לתלמידים הזדמנות להתנסות באופן ישיר בניתוח תוצאות. השיעור מהווה בסיס חשוב להמשך לימודי הפיזיקה, ומפתח את יכולת החשיבה הביקורתית של התלמידים, תוך יצירת חיבור בין התיאוריה לניסוי.
+      </div>
+      <div class="quiz">
+        <h1>חידון תרגול בפיזיקה</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. איזה חוק פיזיקלי מתאר את תנועת גופים תחת השפעת כוח?</p>
+                <input type="radio" name="q1" value="חוק ההתמדה" > חוק ההתמדה
+                <input type="radio" name="q1" value="חוק הכבידה" > חוק הכבידה
+                <input type="radio" name="q1" value="חוק השימור של אנרגיה" > חוק השימור של אנרגיה
+            </div>
+
+            <div class="question">
+                <p>2. מהי יחידת המידה של כוח?</p>
+                <input type="radio" name="q2" value="קילוגרם" > קילוגרם
+                <input type="radio" name="q2" value="ניוטון" > ניוטון
+                <input type="radio" name="q2" value="ג'ול" > ג'ול
+            </div>
+
+            <div class="question">
+                <p>3. מהו מקור האנרגיה של השמש?</p>
+                <input type="radio" name="q3" value="אנרגיה גרעינית" > אנרגיה גרעינית
+                <input type="radio" name="q3" value="אנרגיית חום" > אנרגיית חום
+                <input type="radio" name="q3" value="אנרגיה כימית" > אנרגיה כימית
+            </div>
+
+            <div class="question">
+                <p>4. איזה סוג של אנרגיה נוצרת בתהליך של חיכוך בין גופים?</p>
+                <input type="radio" name="q4" value="אנרגיה קינטית" > אנרגיה קינטית
+                <input type="radio" name="q4" value="אנרגיית חום" > אנרגיית חום
+                <input type="radio" name="q4" value="אנרגיה פוטנציאלית" > אנרגיה פוטנציאלית
+            </div>
+
+            <div class="question">
+                <p>5. מהו חוק השימור של אנרגיה?</p>
+                <input type="radio" name="q5" value="אנרגיה לא נעלמת, היא יכולה רק להתממש בצורות שונות" > אנרגיה לא נעלמת, היא יכולה רק להתממש בצורות שונות
+                <input type="radio" name="q5" value="אנרגיה תמיד מתפוגגת והופכת לאנרגיית חום" > אנרגיה תמיד מתפוגגת והופכת לאנרגיית חום
+                <input type="radio" name="q5" value="אנרגיה יכולה להיעלם בתנאים מסוימים" > אנרגיה יכולה להיעלם בתנאים מסוימים
+            </div>
+
+            <div class="question">
+                <p>6. איך נקראת אנרגיית התנועה של גוף?</p>
+                <input type="radio" name="q6" value="אנרגיה פוטנציאלית" > אנרגיה פוטנציאלית
+                <input type="radio" name="q6" value="אנרגיה קינטית" > אנרגיה קינטית
+                <input type="radio" name="q6" value="אנרגיית חום" > אנרגיית חום
+            </div>
+
+            <div class="question">
+                <p>7. איזה מכשיר מודד את הכוח הפועל על גוף?</p>
+                <input type="radio" name="q7" value="מדחום" > מדחום
+                <input type="radio" name="q7" value="דינמומטר" > דינמומטר
+                <input type="radio" name="q7" value="מדי לחץ" > מדי לחץ
+            </div>
+
+            <div class="question">
+                <p>8. איזה סוג של אנרגיה קשור לאור שמגיע מהשמש?</p>
+                <input type="radio" name="q8" value="אנרגיה כימית" > אנרגיה כימית
+                <input type="radio" name="q8" value="אנרגיית חום" > אנרגיית חום
+                <input type="radio" name="q8" value="אנרגיה פוטואלקטרית" > אנרגיה פוטואלקטרית
+            </div>
+
+            <div class="question">
+                <p>9. מהו מקור אנרגיית החום במנוע רכב?</p>
+                <input type="radio" name="q9" value="אנרגיה חשמלית" > אנרגיה חשמלית
+                <input type="radio" name="q9" value="אנרגיה כימית" > אנרגיה כימית
+                <input type="radio" name="q9" value="אנרגיה מכנית" > אנרגיה מכנית
+            </div>
+
+            <div class="question">
+                <p>10. איזה חוק פיזיקלי מתאר את ההתנגדות של גוף לנוע במרחב?</p>
+                <input type="radio" name="q10" value="חוק ניוטון הראשון" > חוק ניוטון הראשון
+                <input type="radio" name="q10" value="חוק ניוטון השני" > חוק ניוטון השני
+                <input type="radio" name="q10" value="חוק ניוטון השלישי" > חוק ניוטון השלישי
+            </div>
+
+            </form>
+
+        <div class="quiz-bottom">
+            <button type="button" class="checkbutton" onclick="checkAnswers()">שלח תשובות</button>
+            <div class="score-container">
+                <span>הציון שלך: </span>
+                <div id="result" class="result"></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="chat-section">
+        <div class="chat-box">
+          <div class="chat-header">שאל שאלה</div>
+          <div class="chat-messages" id="chatMessages"></div>
+          <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="הקלד את שאלתך כאן...">
+            <button onclick="sendMessage()">שלח</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+  

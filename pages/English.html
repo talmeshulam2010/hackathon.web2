@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <link rel="stylesheet" href=".././style/style.css" />
+    <script src=".././script/script.js" defer></script>
+
+</head>
+
+<body onload="English_grade_check()">
+
+    <div class="header">
+        <h1>חומר השלמה באנגלית - כיתה ט׳</h1>
+        <button class="homebutton" onclick="home()">דף בית</button>
+    </div>
+    <div class=Ebackground_box>
+
+
+        <div id="E9">
+            <h1 class="summary_title">english subject summery 9th grade</h1>
+        </div>
+
+        <div id="E8">
+            <h1 class="summary_title">english subject summery 8th grade</h1>
+        </div>
+
+        <div id="E7">
+            <h1 class="summary_title"> english subject summery 7th grade</h1>
+        </div>
+
+
+        <div class="Esummary_box">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum. Curabitur pretium tincidunt lacus, at
+            tincidunt metus molestie vel. Integer nec odio. Praesent libero. Sed
+            cursus ante dapibus diam. Fusce condimentum nunc ac nisi vulputate, a
+            tempor odio tempor. Sed vel dui ac orci suscipit consequat.
+        </div>
+        <div class="Equiz">
+            <h1>English Quiz</h1>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. Choose the correct verb: She __________ to the store every Saturday.</p>
+                    <input type="radio" name="q1" value="go"> go
+                    <input type="radio" name="q1" value="goes"> goes
+                    <input type="radio" name="q1" value="going"> going
+                </div>
+
+                <div class="question">
+                    <p>2. Which sentence is correct?</p>
+                    <input type="radio" name="q2" value="I am learn English."> I am learn English.
+                    <input type="radio" name="q2" value="I learning English."> I learning English.
+                    <input type="radio" name="q2" value="I am learning English."> I am learning English.
+                </div>
+
+                <div class="question">
+                    <p>3. Choose the correct word: The book is __________ the table.</p>
+                    <input type="radio" name="q3" value="on"> on
+                    <input type="radio" name="q3" value="in"> in
+                    <input type="radio" name="q3" value="under"> under
+                </div>
+
+                <div class="question">
+                    <p>4. What is the past tense of "go"?</p>
+                    <input type="radio" name="q4" value="goed"> goed
+                    <input type="radio" name="q4" value="went"> went
+                    <input type="radio" name="q4" value="gone"> gone
+                </div>
+
+                <div class="question">
+                    <p>5. Which sentence is in the present perfect tense?</p>
+                    <input type="radio" name="q5" value="I will go to the park."> I will go to the park.
+                    <input type="radio" name="q5" value="I am going to the park."> I am going to the park.
+                    <input type="radio" name="q5" value="I have gone to the park."> I have gone to the park.
+                </div>
+
+                <div class="question">
+                    <p>6. What is the opposite of "happy"?</p>
+                    <input type="radio" name="q6" value="sad"> sad
+                    <input type="radio" name="q6" value="angry"> angry
+                    <input type="radio" name="q6" value="tired"> tired
+                </div>
+
+                <div class="question">
+                    <p>7. Choose the correct article: __________ apple is red.</p>
+                    <input type="radio" name="q7" value="An"> An
+                    <input type="radio" name="q7" value="A"> A
+                    <input type="radio" name="q7" value="The"> The
+                </div>
+
+                <div class="question">
+                    <p>8. Which word is a noun?</p>
+                    <input type="radio" name="q8" value="run"> run
+                    <input type="radio" name="q8" value="happy"> happy
+                    <input type="radio" name="q8" value="book"> book
+                </div>
+
+                <div class="question">
+                    <p>9. Choose the correct preposition: The cat is __________ the chair.</p>
+                    <input type="radio" name="q9" value="on"> on
+                    <input type="radio" name="q9" value="at"> at
+                    <input type="radio" name="q9" value="to"> to
+                </div>
+
+                <div class="question">
+                    <p>10. What is the opposite of "big"?</p>
+                    <input type="radio" name="q10" value="small"> small
+                    <input type="radio" name="q10" value="long"> long
+                    <input type="radio" name="q10" value="fast"> fast
+                </div>
+
+                <div class="quiz-bottom">
+                    <button type="button" class="checkbutton" onclick="checkAnswers()">submit answers</button>
+                    <div class="score-container">
+                        <span>הציון שלך: </span>
+                        <div id="result" class="result"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-box">
+                <div class="chat-header">שאל שאלה</div>
+                <div class="chat-messages" id="chatMessages"></div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="הקלד הודעה...">
+                    <button>שלח</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

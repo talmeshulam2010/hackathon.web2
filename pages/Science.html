@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <link rel="stylesheet" href=".././style/style.css"/>
+    <script src=".././script/script.js" defer></script>
+
+  </head>
+  <body dir="rtl" onload="Science_grade_check()">
+    <div class="header">
+        <h1 class="headerText">חומר השלמה במדעים</h1>
+        <button class="homebutton" onclick="home()">דף בית</button>
+    </div>
+      <div class=background_box>
+
+          
+        <div id = "S9">
+            <h1 class="summary_title"> סיכום שיעור מדעים לכיתה ט</h1>
+        </div>
+
+          <div id = "S8">
+              <h1 class="summary_title"> סיכום שיעור מדעים לכיתה ח</h1>
+          </div>
+
+          <div id = "S7">
+              <h1 class="summary_title"> סיכום שיעור מדעים לכיתה ז</h1>
+          </div>
+
+          
+      <div class="summary_box">
+                  במדעים אנחנו יוצאים למסע מרתק בעולמות הביולוגיה, הכימיה והפיזיקה
+          בביולוגיה נצלול לעומק התא, נבין איך תכונות עוברות בתורשה ונכיר את מערכות הגוף השונות.
+          נלמד גם על התפתחות החיים בכדור הארץ דרך תהליך האבולוציה המדהים.
+          בכימיה נגלה מהם החומרים סביבנו, איך הם מסודרים בטבלה המחזורית ואיך הם מגיבים זה עם זה.
+          בפיזיקה נחקור את חוקי התנועה, את הכוחות שפועלים בעולם ואת סוגי האנרגיה השונים.
+          במהלך הלימודים נתנסה בעריכת ניסויים, נלמד איך לאסוף ולנתח מידע בצורה מסודרת.
+          נפתח את החשיבה הביקורתית שלנו כדי להבין טוב יותר את העולם המדעי שסביבנו.
+          כל אלה יחד יתנו לנו בסיס חזק להמשך לימודי המדעים בעתיד.
+      </div>
+      <div class="quiz">
+          <h1>חידון תרגול במדעים</h1>
+          <form id="quizForm">
+              <div class="question">
+                  <p>1. איזה רכיב נמצא בכל תא גוף של אורגניזם?</p>
+                  <input type="radio" name="q1" value="תא" > תא
+                  <input type="radio" name="q1" value="דנ"א" > דנ"א
+                  <input type="radio" name="q1" value="פחמימות" > פחמימות
+              </div>
+
+              <div class="question">
+                  <p>2. מהו החומר שמהווה את יחידת המבנה הבסיסית של כל חומר חי?</p>
+                  <input type="radio" name="q2" value="אטום" > אטום
+                  <input type="radio" name="q2" value="תא" > תא
+                  <input type="radio" name="q2" value="מולקולה" > מולקולה
+              </div>
+
+              <div class="question">
+                  <p>3. איזה סוג של אנרגיה מייצרת השמש?</p>
+                  <input type="radio" name="q3" value="אנרגיית חשמל" > אנרגיית חשמל
+                  <input type="radio" name="q3" value="אנרגיית חום ואור" > אנרגיית חום ואור
+                  <input type="radio" name="q3" value="אנרגיית כימית" > אנרגיית כימית
+              </div>
+
+              <div class="question">
+                  <p>4. איזה איבר בגוף אחראי על סינון פסולת מהדם?</p>
+                  <input type="radio" name="q4" value="כבד" > כבד
+                  <input type="radio" name="q4" value="לב" > לב
+                  <input type="radio" name="q4" value="כליה" > כליה
+              </div>
+
+              <div class="question">
+                  <p>5. מהו החומר שמהווה את רוב גוף האדם?</p>
+                  <input type="radio" name="q5" value="חלבון" > חלבון
+                  <input type="radio" name="q5" value="מים" > מים
+                  <input type="radio" name="q5" value="שומן" > שומן
+              </div>
+
+              <div class="question">
+                  <p>6. איזה חלק בתא אחראי על יצור האנרגיה?</p>
+                  <input type="radio" name="q6" value="גרעין" > גרעין
+                  <input type="radio" name="q6" value="מיטוכונדריה" > מיטוכונדריה
+                  <input type="radio" name="q6" value="ריבוזום" > ריבוזום
+              </div>
+
+              <div class="question">
+                  <p>7. איזה חומצת אמינו אינה ניתנת לייצור על ידי הגוף ויש לקבלה מהמזון?</p>
+                  <input type="radio" name="q7" value="גליצין" > גליצין
+                  <input type="radio" name="q7" value="היסטידין" > היסטידין
+                  <input type="radio" name="q7" value="פנילאלנין" > פנילאלנין
+              </div>
+
+              <div class="question">
+                  <p>8. כיצד נקרא התהליך שבו צמחים משתמשים באור השמש כדי לייצר מזון?</p>
+                  <input type="radio" name="q8" value="פוטוסינתזה" > פוטוסינתזה
+                  <input type="radio" name="q8" value="הפקת אנרגיה" > הפקת אנרגיה
+                  <input type="radio" name="q8" value="הפרשת חמצן" > הפרשת חמצן
+              </div>
+
+              <div class="question">
+                  <p>9. איזה סוג של עצם נמצא ברוב המפרקים בגוף?</p>
+                  <input type="radio" name="q9" value="עצם שטוחה" > עצם שטוחה
+                  <input type="radio" name="q9" value="עצם ארוכה" > עצם ארוכה
+                  <input type="radio" name="q9" value="עצם קצרה" > עצם קצרה
+              </div>
+
+              <div class="question">
+                  <p>10. איזה תהליך מבצע הצמח על מנת לגדול ולהתפתח?</p>
+                  <input type="radio" name="q10" value="האבקה" > האבקה
+                  <input type="radio" name="q10" value="פוטוסינתזה" > פוטוסינתזה
+                  <input type="radio" name="q10" value="התרבות" > התרבות
+              </div>
+
+
+          <div class="quiz-bottom">
+              <button type="button" class="checkbutton" onclick="checkAnswers()">שלח תשובות</button>
+              <div class="score-container">
+                  <span>הציון שלך: </span>
+                  <div id="result" class="result"></div>
+              </div>
+          </div>
+      </div>
+
+          <div class="chat-section">
+            <div class="chat-box">
+              <div class="chat-header">שאל שאלה</div>
+              <div class="chat-messages" id="chatMessages"></div>
+              <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="הקלד את שאלתך כאן...">
+                <button onclick="sendMessage()">שלח</button>
+              </div>
+            </div>
+            </div>
+    </div>
+  </body>
+</html>
