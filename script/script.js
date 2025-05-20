@@ -58,7 +58,7 @@ document.getElementById("subjectForm").addEventListener("submit", function(e) {
 });
 
 function home() {
-  window.location.href = "./index.html";
+  window.location.href = "../index.html";
 }
 
 function sendMessage() {
