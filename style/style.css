@@ -1,103 +1,149 @@
+It looks like there's a small typo in your CSS (height: 100px;er;). I've fixed that and made several improvements to the design, including a new color scheme, more spacing, and better typography.
+
+Here's the corrected and improved CSS code:
+
+CSS
+
 /* Set the body and html height to 100% */
 html, body {
   height: 100%;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+  color: #333; /* Darker text for better readability */
 }
 
-.header {
-  background-color: lightgreen;
-  text-align: center;
-  width: 100%;
-  height: 100px;er;
-  align-items: center;
-}
-.main_header {
-  background-color: lightgreen;
+/* Header styles */
+.header, .main_header {
+  background-color: #4CAF50; /* A pleasant green */
+  color: white; /* White text for contrast */
   text-align: center;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
+/* Main content box */
 .box {
-  background-color: lightblue;
+  background-color: #E8F5E9; /* Lighter green for the background */
   text-align: center;
   width: 100%;
-  height: 90%;
+  min-height: calc(100% - 100px); /* Adjust height to fill remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px; /* Increased gap for more breathing room */
+  padding: 20px 0; /* Add vertical padding */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Summary boxes */
+.summary_box, .Esummary_box {
+  font-size: 26px; /* Slightly larger font */
+  padding: 10px 20px;
+  background-color: #BBDEFB; /* Soft blue for summary boxes */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .summary_box {
-  font-size:24px;
   margin-right: 10px;
 }
 
-.background_box {
-  background-color: lightblue;
+.Esummary_box {
+  margin-left: 10px;
+}
+
+/* Quiz container */
+.quiz, .Equiz {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #F8F8F8; /* Light grey background for quizzes */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px auto; /* Center the quiz horizontally with auto margins */
+  max-width: 800px; /* Limit max width for better readability on large screens */
+  box-sizing: border-box;
 }
 
 .quiz {
-  font-family: Arial, sans-serif;
   direction: rtl;
   text-align: right;
-  margin: 20px
 }
 
 .Equiz {
   direction: ltr;
-  margin-left: 5px;
-}
-.Ebackground_box{
-  background-color:lightblue;
+  text-align: left; /* Align English quiz to the left */
 }
 
-.Esummary_box{
-  margin-left: 10px;
-  font-size:24px;
+/* Input and select elements */
+select, input {
+  font-size: 24px; /* Slightly smaller for better fit */
+  padding: 10px;
+  margin-bottom: 20px; /* Reduced margin for closer elements */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px); /* Adjust width considering padding and border */
+  max-width: 400px; /* Limit input width */
+  box-sizing: border-box;
 }
 
-.checkbutton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
+/* Buttons */
+button, .checkbutton, .start-button, .homebutton {
+  padding: 12px 25px;
+  font-size: 18px;
   cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
   margin-bottom: 15px;
-}
-
-button{
-  font-size: 20px;
-  cursor: pointer;
-  margin-bottom: 10px; 
   text-align: center;
 }
 
-.summary_title {
-  margin:0;
-  margin-bottom: 20px;
-  margin-right: 10px;
+button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
 }
 
+.checkbutton {
+  background-color: #607D8B; /* Blue-grey for check button */
+  color: white;
+  margin-top: 20px;
+}
 
-select,input{
-  font-size:30px;
-  margin-bottom: 50px;
+.checkbutton:hover {
+  background-color: #455A64;
 }
 
 .start-button {
   font-size: 32px;
   padding: 15px 50px;
   margin-top: 30px;
-  background-color: lightgreen;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  background-color: #4CAF50; /* Green for start button */
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #43A047;
+}
+
+.homebutton {
+  background-color: #388E3C; /* Darker green for home button */
+  color: white;
+}
+
+.homebutton:hover {
+  background-color: #2E7D32;
+}
+
+.summary_title {
+  margin: 0;
+  margin-bottom: 25px; /* Increased margin */
+  font-size: 28px;
+  color: #212121;
 }
 
 .hidden {
@@ -106,17 +152,18 @@ select,input{
 
 .grade-display {
   font-size: 24px;
-  margin: 10px 0;
+  margin: 15px 0; /* Adjusted margin */
   font-weight: bold;
-  color: #333;
+  color: #4CAF50; /* Green for grade display */
 }
 
 .quiz-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px; /* Increased gap */
   margin: 30px 0;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .score-container {
@@ -128,85 +175,90 @@ select,input{
   gap: 10px;
   border: 2px solid #4CAF50;
   border-radius: 8px;
-  background-color: #f8f8f8;
+  background-color: #E8F5E9; /* Lighter background for score */
   width: fit-content;
-  margin: 50;
+  margin: 20px auto; /* Center the score container */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .result {
   display: inline-block;
   font-weight: bold;
+  color: #212121;
 }
 
 .incorrect-answer {
-  border: 2px solid #ff4444;
+  border: 2px solid #EF5350; /* Red for incorrect answers */
   border-radius: 8px;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #fff0f0;
+  padding: 15px;
+  margin: 15px 0; /* Increased margin */
+  background-color: #FFEBEE; /* Lighter red background */
+  color: #D32F2F; /* Darker red text */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.incorrect-answer {
-  border: 2px solid #ff4444;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #fff0f0;
-}
-
+/* Chat section */
 .chat-section {
-  margin: 20px auto;
-  width: 80%;
-  max-width: 600px;
-  background-color: lightblue;
+  margin: 30px auto; /* More margin for chat section */
+  width: 90%; /* Increased width */
+  max-width: 700px; /* Increased max-width */
+  background-color: #CFD8DC; /* Light blue-grey background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* More prominent shadow */
 }
 
 .chat-box {
-  border: 2px solid #4CAF50;
-  border-radius: 8px;
+  border: 2px solid #607D8B; /* Darker blue-grey border */
+  border-radius: 10px;
   background-color: white;
+  overflow: hidden; /* Ensure border-radius applies to children */
 }
 
 .chat-header {
-  background-color: #4CAF50;
+  background-color: #607D8B; /* Blue-grey header */
   color: white;
-  padding: 10px;
+  padding: 15px; /* More padding */
   text-align: center;
   font-weight: bold;
-  border-radius: 6px 6px 0 0;
+  font-size: 20px;
+  border-radius: 8px 8px 0 0;
 }
 
 .chat-messages {
-  height: 200px;
+  height: 250px; /* Taller chat messages area */
   overflow-y: auto;
-  padding: 10px;
+  padding: 15px; /* More padding */
+  background-color: #ECEFF1; /* Very light grey background */
+  border-bottom: 1px solid #CFD8DC;
 }
 
 .chat-input {
   display: flex;
-  padding: 10px;
-  gap: 10px;
+  padding: 15px; /* More padding */
+  gap: 15px; /* Increased gap */
+  background-color: #ECEFF1; /* Match message background */
 }
 
 .chat-input input {
   flex: 1;
-  padding: 5px;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  border: 1px solid #90A4AE; /* Softer border */
+  border-radius: 5px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #607D8B; /* Blue-grey button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   margin: 0;
   font-size: 16px;
 }
 
-.chat-input button {
-  padding: 5px 15px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0;
-}
-
-.homebutton {
-  background-color:darkgreen;
-  border-radius: 8px;
-  color: white;
+.chat-input button:hover {
+  background-color: #455A64;
 }
