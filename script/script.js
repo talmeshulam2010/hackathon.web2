@@ -1,3 +1,66 @@
+// This is a conceptual example for your script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const gradeSelect = document.getElementById('gradeSelect');
+    const selectedGradeDisplay = document.getElementById('selectedGradeDisplay'); // Assuming you want to display it
+
+    if (gradeSelect) {
+        gradeSelect.addEventListener('change', function() {
+            const selectedGrade = this.value;
+            // Action to perform on "auto-confirm"
+            // For example, update the display or enable the subject selection
+            if (selectedGradeDisplay) {
+                selectedGradeDisplay.textContent = `הכיתה שנבחרה: ${selectedGrade}`;
+            }
+            console.log(`Class selected and auto-confirmed: ${selectedGrade}`);
+            
+            // Add any other logic that should happen when a class is chosen,
+            // e.g., fetching subjects for that class, showing the subject form, etc.
+            
+            // If the original form submission had other effects, replicate them here.
+            // For instance, if it was preventing default and then doing something via AJAX:
+            // event.preventDefault(); // Not needed here as there's no form submission for grade anymore
+            // performGradeConfirmationLogic(selectedGrade);
+        });
+    }
+
+    // Your existing JavaScript for startButton, subjectForm submission, etc. would remain.
+    const startButton = document.getElementById('startButton');
+    const initialContent = document.getElementById('initial-content');
+    const selectionContent = document.getElementById('selection-content');
+
+    if (startButton && initialContent && selectionContent) {
+        startButton.addEventListener('click', () => {
+            initialContent.classList.add('hidden');
+            selectionContent.classList.remove('hidden');
+        });
+    }
+
+    const subjectForm = document.getElementById('subjectForm');
+    if (subjectForm) {
+        subjectForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission for now
+            const selectedGrade = document.getElementById('gradeSelect').value; // Get the auto-confirmed grade
+            const selectedSubject = document.getElementById('subjectSelect').value;
+            alert(`הכיתה שנבחרה: ${selectedGrade}\nהמקצוע שנבחר: ${selectedSubject}\n\nהלמידה מתחילה! (זהו מקום לדוגמה לפעולה הסופית)`);
+            // Add logic here to proceed to the learning content
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById("startButton").addEventListener("click", function() {
   document.getElementById("initial-content").style.display = "none";
   document.getElementById("selection-content").classList.remove("hidden");
