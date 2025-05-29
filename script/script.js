@@ -23,7 +23,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+ // Your existing JavaScript for startButton, subjectForm submission, etc. would remain.
+    const startButton = document.getElementById('startButton');
+    const initialContent = document.getElementById('initial-content');
+    const selectionContent = document.getElementById('selection-content');
 
+    if (startButton && initialContent && selectionContent) {
+        startButton.addEventListener('click', () => {
+            initialContent.classList.add('hidden');
+            selectionContent.classList.remove('hidden');
+        });
+    }
+
+    const subjectForm = document.getElementById('subjectForm');
+    if (subjectForm) {
+        subjectForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission for now
+            const selectedGrade = document.getElementById('gradeSelect').value; // Get the auto-confirmed grade
+            const selectedSubject = document.getElementById('subjectSelect').value;
+            alert(`הכיתה שנבחרה: ${selectedGrade}\nהמקצוע שנבחר: ${selectedSubject}\n\nהלמידה מתחילה! (זהו מקום לדוגמה לפעולה הסופית)`);
+            // Add logic here to proceed to the learning content
+        });
+    }
+});
 
 
 document.getElementById("startButton").addEventListener("click", function() {
