@@ -3,8 +3,7 @@
   <head>
     <link rel="stylesheet" href="./style/style.css"/>
     <script src="./script/script.js" defer></script>
-
-  </head>
+    <title>אתר למידה</title> </head>
   <body dir="rtl">
 
     <div class="main_header">
@@ -24,23 +23,21 @@
         <h2>בחר כיתה ומקצוע</h2>
         <div id="selectedGradeDisplay" class="grade-display"></div>  
         <form id="gradeForm">
-          <select id="gradeSelect">
+          <label for="gradeSelect">בחר כיתה:</label> <select id="gradeSelect">
             <option>כיתה ז</option>
             <option>כיתה ח</option>
             <option>כיתה ט</option>
           </select>
-          <input type="submit" value="אישור">      
-        </form>
+          </form>
 
         <form id="subjectForm">
-          <select id="subjectSelect">
+          <label for="subjectSelect">בחר מקצוע:</label> <select id="subjectSelect">
             <option>מתמטיקה</option>
             <option>אנגלית</option>
             <option>מדעים</option>
             <option>עברית</option>
           </select>
-          <input type="submit" value="אישור">
-        </form>
+          <input type="submit" value="אישור"> </form>
       </div>
 
     </div>
