@@ -1,109 +1,100 @@
-// This is a conceptual example for your script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const gradeSelect = document.getElementById('gradeSelect');
-    const selectedGradeDisplay = document.getElementById('selectedGradeDisplay'); // Assuming you want to display it
+document.addEventListener("DOMContentLoaded", function() { // Ensure the DOM is fully loaded
 
-    if (gradeSelect) {
-        gradeSelect.addEventListener('change', function() {
-            const selectedGrade = this.value;
-            // Action to perform on "auto-confirm"
-            // For example, update the display or enable the subject selection
-            if (selectedGradeDisplay) {
-                selectedGradeDisplay.textContent = `הכיתה שנבחרה: ${selectedGrade}`;
-            }
-            console.log(`Class selected and auto-confirmed: ${selectedGrade}`);
-            
-            // Add any other logic that should happen when a class is chosen,
-            // e.g., fetching subjects for that class, showing the subject form, etc.
-            
-            // If the original form submission had other effects, replicate them here.
-            // For instance, if it was preventing default and then doing something via AJAX:
-            // event.preventDefault(); // Not needed here as there's no form submission for grade anymore
-            // performGradeConfirmationLogic(selectedGrade);
-        });
-    }
+  const initialContent = document.getElementById("initial-content");
+  const selectionContent = document.getElementById("selection-content");
+  const startButton = document.getElementById("startButton");
+  const gradeSelect = document.getElementById("gradeSelect");
+  const selectedGradeDisplay = document.getElementById("selectedGradeDisplay");
+  const subjectSelect = document.getElementById("subjectSelect");
+  const subjectForm = document.getElementById("subjectForm");
+  const gradeForm = document.getElementById("gradeForm"); // Get the grade form
 
- // Your existing JavaScript for startButton, subjectForm submission, etc. would remain.
-    const startButton = document.getElementById('startButton');
-    const initialContent = document.getElementById('initial-content');
-    const selectionContent = document.getElementById('selection-content');
+  // 1. Hide the grade form's submit button if it exists (or you can remove it from HTML)
+  // Assuming your grade form's submit button has an ID like "confirmGradeButton"
+  const confirmGradeButton = document.getElementById("confirmGradeButton"); // GUESSED ID
+  if (confirmGradeButton) {
+    confirmGradeButton.style.display = "none";
+  }
+  // Or, if the gradeForm itself IS the button or only contains the select,
+  // you might not need to hide a separate button but prevent its default submission if any.
 
-    if (startButton && initialContent && selectionContent) {
-        startButton.addEventListener('click', () => {
-            initialContent.classList.add('hidden');
-            selectionContent.classList.remove('hidden');
-        });
-    }
+  if (startButton) {
+    startButton.addEventListener("click", function() {
+      if (initialContent) initialContent.style.display = "none";
+      if (selectionContent) selectionContent.classList.remove("hidden");
+    });
+  }
 
-    const subjectForm = document.getElementById('subjectForm');
-    if (subjectForm) {
-        subjectForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent actual form submission for now
-            const selectedGrade = document.getElementById('gradeSelect').value; // Get the auto-confirmed grade
-            const selectedSubject = document.getElementById('subjectSelect').value;
-            alert(`הכיתה שנבחרה: ${selectedGrade}\nהמקצוע שנבחר: ${selectedSubject}\n\nהלמידה מתחילה! (זהו מקום לדוגמה לפעולה הסופית)`);
-            // Add logic here to proceed to the learning content
-        });
-    }
-});
+  // 2. Handle grade selection automatically when the dropdown value changes
+  if (gradeSelect) {
+    gradeSelect.addEventListener("change", function() {
+      var selectedGrade = this.value; // 'this' refers to gradeSelect
 
-
-document.getElementById("startButton").addEventListener("click", function() {
-  document.getElementById("initial-content").style.display = "none";
-  document.getElementById("selection-content").classList.remove("hidden");
-});
-
-document.getElementById("gradeForm").addEventListener("submit", function(e) {           
-  e.preventDefault();
-  var selectedGrade = document.getElementById("gradeSelect").value;
-  document.getElementById("selectedGradeDisplay").textContent = selectedGrade;
-  localStorage.setItem('selectedGrade', selectedGrade);
-  console.log(localStorage.getItem("selectedGrade"))
-
-
-
-    
-  // Check if "פיזיקה" option already exists to avoid duplicates
-  const physicsOptionExists = Array.from(document.getElementById("subjectSelect").options).some(option => option.value === 'פיזיקה');
-
-  if (selectedGrade === "כיתה ט" && !physicsOptionExists) {
-    const physics_opt = document.createElement('option');
-    physics_opt.textContent = 'פיזיקה';
-    physics_opt.value = 'פיזיקה'; // Add a value for the option
-    document.getElementById("subjectSelect").appendChild(physics_opt);
-  } else if (selectedGrade !== "כיתה ט" && physicsOptionExists) {
-    // Remove "פיזיקה" option if grade is not 9th and it exists
-    const subjectSelect = document.getElementById("subjectSelect");
-    for (let i = 0; i < subjectSelect.options.length; i++) {
-      if (subjectSelect.options[i].value === 'פיזיקה') {
-        subjectSelect.remove(i);
-        break; // Exit the loop after removing
+      if (selectedGradeDisplay) {
+        selectedGradeDisplay.textContent = selectedGrade;
       }
-    }
+      localStorage.setItem('selectedGrade', selectedGrade);
+      console.log("Selected grade (auto-confirmed):", localStorage.getItem("selectedGrade"));
+
+      // Check if "פיזיקה" option already exists to avoid duplicates
+      const physicsOptionExists = Array.from(subjectSelect.options).some(option => option.value === 'פיזיקה');
+
+      if (selectedGrade === "כיתה ט" && !physicsOptionExists) {
+        const physics_opt = document.createElement('option');
+        physics_opt.textContent = 'פיזיקה';
+        physics_opt.value = 'פיזיקה';
+        subjectSelect.appendChild(physics_opt);
+      } else if (selectedGrade !== "כיתה ט" && physicsOptionExists) {
+        // Remove "פיזיקה" option if grade is not 9th and it exists
+        for (let i = 0; i < subjectSelect.options.length; i++) {
+          if (subjectSelect.options[i].value === 'פיזיקה') {
+            subjectSelect.remove(i);
+            break; // Exit the loop after removing
+          }
+        }
+      }
+      // No e.preventDefault() needed here as it's a 'change' event on a select,
+      // unless the gradeForm itself had a submit button you're now bypassing.
+      // If gradeForm had a submit button and you removed/hid it,
+      // ensure this 'change' event doesn't inadvertently submit a form if nested.
+    });
   }
-});
 
-document.getElementById("subjectForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  let selectedSubject = document.getElementById("subjectSelect").value;
-  console.log("מקצוע שנבחר:", selectedSubject);
-
-  let subjectRedirectURL;
-
-  if (selectedSubject === "מתמטיקה") {
-    subjectRedirectURL = "/Math.html";
-  } else if (selectedSubject === "מדעים") {
-    subjectRedirectURL = "/Science.html";
-  } else if (selectedSubject === "אנגלית") {
-    subjectRedirectURL = "/English.html";
-  } else if (selectedSubject === "עברית") {
-    subjectRedirectURL = "/Hebrew.html";
-  } else if (selectedSubject === "פיזיקה") {
-    subjectRedirectURL = "/Physics.html";
+  // If the gradeForm element exists and you want to prevent any accidental submission
+  // (e.g., if a user presses Enter while focused on the select), you can add this:
+  if (gradeForm) {
+    gradeForm.addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent default form submission
+        console.log("Grade form submission prevented as grade selection is now automatic.");
+    });
   }
 
-  if (subjectRedirectURL) {
-    window.location.href = "./pages"+subjectRedirectURL;
+
+  // 3. Subject selection remains largely the same (with its own confirm button)
+  if (subjectForm) {
+    subjectForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      let selectedSubject = subjectSelect.value;
+      console.log("מקצוע שנבחר:", selectedSubject);
+
+      let subjectRedirectURL;
+
+      if (selectedSubject === "מתמטיקה") {
+        subjectRedirectURL = "/Math.html";
+      } else if (selectedSubject === "מדעים") {
+        subjectRedirectURL = "/Science.html";
+      } else if (selectedSubject === "אנגלית") {
+        subjectRedirectURL = "/English.html";
+      } else if (selectedSubject === "עברית") {
+        subjectRedirectURL = "/Hebrew.html";
+      } else if (selectedSubject === "פיזיקה") {
+        subjectRedirectURL = "/Physics.html";
+      }
+
+      if (subjectRedirectURL) {
+        window.location.href = "./pages" + subjectRedirectURL;
+      }
+    });
   }
 });
 
