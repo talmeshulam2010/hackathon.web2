@@ -15,7 +15,7 @@ html, body {
 
 /* Header styles */
 .header, .main_header {
-  background-color: #4CAF50; /* A pleasant green */
+  background-color: #87CEEB; /* A pleasant green */
   color: white; /* White text for contrast */
   text-align: center;
   width: 100%;
