@@ -3,13 +3,12 @@ document.getElementById("startButton").addEventListener("click", function() {
   document.getElementById("selection-content").classList.remove("hidden");
 });
 
-document.getElementById("gradeForm").addEventListener("submit", function(e) {           
-  e.preventDefault();
+const gradeSelectElement = document.getElementById('gradeSelect');
+gradeSelectElement.addEventListener('change', function() {
   var selectedGrade = document.getElementById("gradeSelect").value;
   document.getElementById("selectedGradeDisplay").textContent = selectedGrade;
   localStorage.setItem('selectedGrade', selectedGrade);
   console.log(localStorage.getItem("selectedGrade"))
-
 
 
     
