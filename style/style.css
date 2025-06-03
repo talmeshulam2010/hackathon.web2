@@ -155,7 +155,8 @@ button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
   font-size: 24px;
   margin: 15px 0; /* Adjusted margin */
   font-weight: bold;
-  color: #B0E0E6; /* Blue for grade display */
+  color: #4CAF50; /* Green for grade display */
+  display: none;
 }
 
 .quiz-bottom {
