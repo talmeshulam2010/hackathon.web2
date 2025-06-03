@@ -29,7 +29,7 @@ html, body {
 
 /* Main content box */
 .box {
-  background-color: #B0E0E6; /* Lighter green for the background */
+  background-color: #B0E0E6; /* Lighter blue for the background */
   text-align: center;
   width: 100%;
   min-height: calc(100% - 100px); /* Adjust height to fill remaining space */
@@ -128,16 +128,16 @@ button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
 }
 
 .start-button:hover {
-  background-color: #43A047;
+  background-color: #A9EAFE;
 }
 
 .homebutton {
-  background-color: #388E3C; /* Darker green for home button */
+  background-color: #BBDEFB; /* Darker blue for home button */
   color: white;
 }
 
 .homebutton:hover {
-  background-color: #2E7D32;
+  background-color: #C2EBED;
 }
 
 .summary_title {
@@ -155,7 +155,7 @@ button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
   font-size: 24px;
   margin: 15px 0; /* Adjusted margin */
   font-weight: bold;
-  color: #4CAF50; /* Green for grade display */
+  color: #B0E0E6; /* Blue for grade display */
 }
 
 .quiz-bottom {
@@ -174,9 +174,9 @@ button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 2px solid #4CAF50;
+  border: 2px solid #A9EAFE;
   border-radius: 8px;
-  background-color: #E8F5E9; /* Lighter background for score */
+  background-color: #C2EBED; /* Lighter background for score */
   width: fit-content;
   margin: 20px auto; /* Center the score container */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
