@@ -15,7 +15,7 @@ html, body {
 
 /* Header styles */
 .header, .main_header {
-  background-color: #A9EAFE; /* A pleasant green */
+  background-color: #A9EAFE; /* A pleasant  blue */
   color: white; /* White text for contrast */
   text-align: center;
   width: 100%;
@@ -29,7 +29,7 @@ html, body {
 
 /* Main content box */
 .box {
-  background-color: #E8F5E9; /* Lighter green for the background */
+  background-color: #B0E0E6; /* Lighter green for the background */
   text-align: center;
   width: 100%;
   min-height: calc(100% - 100px); /* Adjust height to fill remaining space */
@@ -110,7 +110,7 @@ button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
 }
 
 .checkbutton {
-  background-color: #607D8B; /* Blue-grey for check button */
+  background-color: #C2EBED; /* Blue-grey for check button */
   color: white;
   margin-top: 20px;
 }
@@ -123,7 +123,7 @@ button:hover, .checkbutton:hover, .start-button:hover, .homebutton:hover {
   font-size: 32px;
   padding: 15px 50px;
   margin-top: 30px;
-  background-color: #4CAF50; /* Green for start button */
+  background-color: #89CFF0; /* Green for start button */
   color: white;
 }
 
