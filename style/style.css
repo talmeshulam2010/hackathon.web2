@@ -15,7 +15,7 @@ html, body {
 
 /* Header styles */
 .header, .main_header {
-  background-color: #87CEEB; /* A pleasant green */
+  background-color: #A9EAFE; /* A pleasant green */
   color: white; /* White text for contrast */
   text-align: center;
   width: 100%;
@@ -63,7 +63,7 @@ html, body {
 .quiz, .Equiz {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #F8F8F8; /* Light grey background for quizzes */
+  background-color: #A9EAFE; /* Light grey background for quizzes */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 20px auto; /* Center the quiz horizontally with auto margins */
