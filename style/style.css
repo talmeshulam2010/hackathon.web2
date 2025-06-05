@@ -16,7 +16,7 @@ html, body {
 /* Header styles */
 .header, .main_header {
   background-color: #A9EAFE; /* A pleasant  blue */
-  color: white; /* White text for contrast */
+  color: #505e5f; /* White text for contrast */
   text-align: center;
   width: 100%;
   height: 100px;
